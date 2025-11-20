@@ -1,18 +1,15 @@
-# test-shopware6
-Used by automated tests to test shopware6 installation
+# test-codeigniter4
+Used by automated tests to test CodeIgniter 4 installation
 
-This repo was created with a `composer create-project` using the techniques at https://developer.shopware.com/docs/guides/installation/template.html and https://ddev.readthedocs.io/en/latest/users/quickstart/#shopware
-
-`ddev config --name=testpkgshopware6 --project-type=shopware6 --docroot=public`
-
-Demo data was installed with the Admin Settings->System->First Run Wizard.
-
-Database db tarball (not db.sql.gz) was created with
+This repo was created with a `composer create-project` using the official CodeIgniter 4 installation method:
 ```
-ddev export-db --gzip=false --file=.tarballs/db.sql && tar -czf .tarballs/shopware6_db.sql.tar.gz -C .tarballs db.sql
+composer create-project codeigniter4/appstarter test-codeigniter4
 ```
 
-Files tarball was created with
+For more information, see the [CodeIgniter 4 Installation Guide](https://codeigniter.com/user_guide/installation/installing_composer.html#id10).
+
+## DDEV Configuration
+
 ```
-cd public/media && tar -czf ../../.tarballs/shopware6_files.tgz .
+ddev config --name=testpkgcodeigniter4 --project-type=codeigniter --docroot=public
 ```
