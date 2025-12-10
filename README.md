@@ -37,7 +37,7 @@ rsync -av --exclude='README.md' --exclude='.gitignore' --exclude='.git' project-
 rm -rf project-root/
 ```
 
-### update tarballs
+### Update tarballs
 
 #### Database tarball (`db.sql.tar.gz`)
 The database tarball contains the output of running migrations on a fresh CodeIgniter 4 install (creates an empty migrations table).
@@ -55,14 +55,6 @@ tar -czf db.sql.tar.gz db.sql
 
 # Clean up
 rm db.sql
-```
-
-#### Files tarball (`files.tar.gz`)
-The files tarball contains the readme.md and welcome page assets used in ddev/ddev tests.
-
-To create/update:
-```bash
-tar -czf files.tar.gz files
 ```
 
 **Note:** These tarballs are used by the automated tests in the main ddev/ddev repository.
